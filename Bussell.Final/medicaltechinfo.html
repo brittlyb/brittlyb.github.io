@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<title>Medical Tech Info</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="icon" href="medical photos/ambulence.png" type="image/x-icon">
+<style>
+body, html {
+  height: 100%;
+  font-family: Montserrat;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("medical photos/medicalwork.jpg");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="medicaltechhome.html" class="w3-button w3-block w3-black">Medical Tech Home Page</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="medicaltechphotos.html" class="w3-button w3-block w3-black">Medical Tech Photo's</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="medicaltechfunfacts.html" class="w3-button w3-block w3-black">Medical Tech Fun Facts</a>
+    </div>
+    </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Medical Technology</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-white w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT MEDICAL TECHNOLOGY</span></h5>
+    <p>The Medical Technology Feild is expected to have steady growth each year, with global annual sales... It should rise to over 5 percent every year & reach nearly $800 billion by 2030.</p>
+    <p>Medical Technology has helped nurses, sergeons, and all hospitals ever since it came around. It makes it easier for hospitals to save lives, improve the quality of life for some patients, and to health improve patient care. Making everything easier for patients and & workers all around. </p>
+    <div class="w3-panel w3-leftbar w3-light-blue">
+      <p><i>"Science and technology can solve all the world's problems, and historically it has been shown to make the world better and better."</i></p>
+      <p>- Zoltan Istvan</p>
+    </div>
+    <img src="medical photos/medicaltech.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+
+  </div>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Medical Technology Instruments</span></h5>
+  
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class="w3-col s6 tablink">1800-1900</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="w3-col s6 tablink">1900-2021</div>
+      </a>
+    </div>
+
+    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Medical Blood Pump</h5>
+      <p class="w3-text-grey">This was invented in 1855, by Porter and Bradley. The blood pump, pumps blood through a system of blood vessels as the heart beats. </p><br>
+    
+      <h5>Anesthesia</h5>
+      <p class="w3-text-grey">This was invented in 1841, by Dr. Crawford W. Long. This is used to put patients asleep while doing surgery.</p><br>
+    
+      <h5>Stethoscope</h5>
+      <p class="w3-text-grey">This was invented in 1815, by René Laënnec. This is used to hear the heartbeat of a patient.</p><br>
+      
+    </div>
+
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+      <h5>CT Scanner</h5>
+      <p class="w3-text-grey">This was invented in 1971, by Dr. Godfrey Hounsfield. This is used to scan the entire body to diagnose you with a disease, or injury. Also used to plan medical, surgical, or radiation treatment.</p><br>
+    
+      <h5>DNA Sequencing</h5>
+      <p class="w3-text-grey">This was invented in 1992, by Dr. Leroy E. Hood. This is used for finding someone's DNA.</p><br>
+    
+      <h5>Telemedicine </h5>
+      <p class="w3-text-grey">This was invented in the late 1960s, but it became a form of healthcare delivery in 2015.</p><br>
+    
+    </div>
+    <img src="medical photos/med.jpg" style="width:100%;max-width:1000px;margin-top:32px;"
+  </div>
+</div>
+
+
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-white w3-padding-48 w3-large">
+  <p>Created By: Brittly Bussell</p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+</div>
+</body>
+</html>
